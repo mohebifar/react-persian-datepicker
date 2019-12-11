@@ -62,7 +62,9 @@ export default class DatePicker extends Component {
   }
 
   handleFocus() {
-    this.setOpen(true);
+    if(!this.props.disabled){
+      this.setOpen(true);
+    }
   }
 
   handleBlur(event) {
